@@ -48,7 +48,9 @@ $textRedirections = array(
     "html" => "text-html",
     "py" => "text-x-python",
     "css" => "text-css",
-    "svg" => "image-x-svg+xml"
+    "svg" => "image-x-svg+xml",
+    "code-workspace" => "visual-studio-code",
+    "gitignore" => "github",
 );
 
 $dirRedirection = array(

@@ -1051,3 +1051,12 @@ Application Mime: application/octet-stream for .ds_store with extention ds_store
 Application Mime: application/octet-stream for .ds_store with extention ds_store: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/applications-all.svg
 Text Mime: text/plain for jimmygorokhoff.code-workspace with extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
 Text Mime: text/plain for jimmygorokhoff.code-workspace with extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Text Mime: text/plain for .gitignore with extention gitignore: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Debug: extention html: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-html.svg
+Debug: extention html: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-html.svg
+Debug: extention gitignore: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/github.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Text Mime: text/rtf for defendtheweb.rtf with extention rtf: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Application Mime: application/vnd.oasis.opendocument.text for how to structure my course.odt with extention odt: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/applications-all.svg
