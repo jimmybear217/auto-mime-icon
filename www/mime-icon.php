@@ -45,7 +45,9 @@ $textRedirections = array(
     "c" => "text-x-c",
     "json" => "text-json",
     "md" => "text-x-markdown",
-    "html" => "text-html"
+    "html" => "text-html",
+    "py" => "text-x-python",
+    "css" => "text-css"
 );
 
 // get file extentions
@@ -115,7 +117,19 @@ switch (explode('/', $mime)[0]) {
         if (file_exists($mimeIconAttempt)) {
             $mimeIcon = $mimeIconAttempt;
         }
-            
+
+        // redirection of extentions to mime files
+        $mimeIconAttempt = __DIR__ . "/icons/text-" . $fileExtention . ".svg";
+        if (file_exists($mimeIconAttempt)) {
+            $mimeIcon = $mimeIconAttempt;
+        }
+
+        // redirection of extentions to mime files
+        $mimeIconAttempt = __DIR__ . "/icons/text-x-" . $fileExtention . ".svg";
+        if (file_exists($mimeIconAttempt)) {
+            $mimeIcon = $mimeIconAttempt;
+        }
+
         // redirections of mimes to mimes
         if (in_array($mimeRedirections, array_keys($mimeRedirections))) {
             $mimeIcon = __DIR__ . "/icons/" . $mimeRedirections[$mime]. ".svg";
