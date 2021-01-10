@@ -44,7 +44,8 @@ $textRedirections = array(
     "cpp" => "text-x-c++",
     "c" => "text-x-c",
     "json" => "text-json",
-    "md" => "text-x-markdown"
+    "md" => "text-x-markdown",
+    "html" => "text-html"
 );
 
 // get file extentions

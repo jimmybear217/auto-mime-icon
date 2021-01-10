@@ -328,3 +328,8 @@ Text Mime: text/plain for error_log with extention error_log: /home/jimmybear217
 Image Mime: image/png for favicon.png
 Text Mime: text/plain for google238d33b1dbfff156.html with extention html: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
 Text Mime: text/plain for robots.txt with extention txt: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for .htaccess with extention htaccess: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for error_log with extention error_log: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Image Mime: image/png for favicon.png
+Debug: extention html: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-html.svg
+Text Mime: text/plain for robots.txt with extention txt: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
