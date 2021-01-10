@@ -22,7 +22,7 @@ if (!empty($_GET["mime"])) {
 
 $filename = '';
 if (!empty($_GET["filename"])) {
-    $filename = trim($_GET["filename"]);
+    $filename = strtolower(trim($_GET["filename"]));
 }
 
 // aliases
@@ -55,7 +55,6 @@ $textRedirections = array(
 $fileExtention = explode('.', $filename);
 $fileExtention = $fileExtention[count($fileExtention)-1];
 $fileExtention = trim($fileExtention);
-$fileExtention = strtolower($fileExtention);
 
 switch (explode('/', $mime)[0]) {
 
@@ -94,7 +93,13 @@ switch (explode('/', $mime)[0]) {
         $mimeIcon = __DIR__ . "/icons/folder-cyan.svg";
         if ($filename == ".git")
             $mimeIcon = __DIR__ . "/icons/github.svg";
-        header("Content-Type: image/svg+xml", true, 200);
+
+        if ($filename == ".ds_store") {
+            $mimeIcon = __DIR__ . "/icons/finder.png";
+            header("Content-Type: image/png", true, 200);
+        } else {
+            header("Content-Type: image/svg+xml", true, 200);
+        }
         echo file_get_contents($mimeIcon);
         break;
 
@@ -103,6 +108,37 @@ switch (explode('/', $mime)[0]) {
         header("Content-Type: image/svg+xml", true, 200);
         echo file_get_contents($mimeIcon);
         error_log("Image Mime: $mime for $filename\n", 3, "mimes_not_found.log");
+        break;
+
+    case 'video':
+
+        // default icon
+        $mimeIconOriginal = __DIR__ . "/icons/video-x-generic.svg";
+        $mimeIcon = $mimeIconOriginal;
+
+        // text/cpp => text-cpp
+        $mimeIconAttempt = __DIR__ . "/icons/" . str_replace("/", "-", $mime) . ".svg";
+        if (file_exists($mimeIconAttempt)) {
+            $mimeIcon = $mimeIconAttempt;
+        }
+
+        // text/cpp => text-x-cpp
+        $mimeIconAttempt = __DIR__ . "/icons/" . str_replace("/", "-x-", $mime) . ".svg";
+        if (file_exists($mimeIconAttempt)) {
+            $mimeIcon = $mimeIconAttempt;
+        }
+
+        // redirection of extentions to mime files
+        $mimeIconAttempt = __DIR__ . "/icons/video-" . $fileExtention . ".svg";
+        if (file_exists($mimeIconAttempt)) {
+            $mimeIcon = $mimeIconAttempt;
+        }
+
+        header("Content-Type: image/svg+xml", true, 200);
+        echo file_get_contents($mimeIcon);
+        if ($mimeIcon == $mimeIconOriginal) {
+            error_log("Video Mime: $mime for $filename\n", 3, "mimes_not_found.log");
+        }
         break;
 
     case 'text':
@@ -173,9 +209,10 @@ switch (explode('/', $mime)[0]) {
                 error_log("Found: $mime for $filename | copy result: $result\n", 3, "mimes_not_found.log");
             } else {
                 // write the mime in plain text and in logs
-                header("Content-Type: text/plain", true);
+                $mimeIcon = __DIR__ . "/icons/unknown.svg";
+                header("Content-Type: image/svg+xml", true);
+                echo file_get_contents($mimeIcon);
                 error_log("Mime not found: $mime for $filename\n", 3, "mimes_not_found.log");
-                echo $mime;
             }
         }
         break;
