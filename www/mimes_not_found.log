@@ -1060,3 +1060,17 @@ Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime
 Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
 Text Mime: text/rtf for defendtheweb.rtf with extention rtf: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
 Application Mime: application/vnd.oasis.opendocument.text for how to structure my course.odt with extention odt: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/applications-all.svg
+Text Mime: text/rtf for defendtheweb.rtf with extention rtf: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Debug: extention gitignore: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/github.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Debug: extention gitignore: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/github.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Debug: extention py: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-python.svg
+Debug: extention py: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-python.svg
+Text Mime: text/x-shellscript for download.sh with extention sh: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
