@@ -53,6 +53,37 @@ $fileExtention = $fileExtention[count($fileExtention)-1];
 $fileExtention = trim($fileExtention);
 
 switch (explode('/', $mime)[0]) {
+
+    case 'application':
+
+        // default icon
+        $mimeIconOriginal = __DIR__ . "/icons/applications-all.svg";
+        $mimeIcon = $mimeIconOriginal;
+
+        // application/pdf => application-pdf
+        $mimeIconAttempt = __DIR__ . "/icons/" . str_replace("/", "-", $mime) . ".svg";
+        if (file_exists($mimeIconAttempt)) {
+            $mimeIcon = $mimeIconAttempt;
+        }
+
+        // application/pdf => application-x-pdf
+        $mimeIconAttempt = __DIR__ . "/icons/" . str_replace("/", "-x-", $mime) . ".svg";
+        if (file_exists($mimeIconAttempt)) {
+            $mimeIcon = $mimeIconAttempt;
+        }
+            
+        // redirections of mimes to mimes
+        if (in_array($mimeRedirections, array_keys($mimeRedirections))) {
+            $mimeIcon = __DIR__ . "/icons/" . $mimeRedirections[$mime]. ".svg";
+        }
+            
+        header("Content-Type: image/svg+xml", true, 200);
+        echo file_get_contents($mimeIcon);
+        if ($mimeIcon == $mimeIconOriginal)
+            error_log("Application Mime: $mime for $filename with extention $fileExtention: $mimeIcon\n", 3, "mimes_not_found.log");
+        break;
+
+
     case 'directory':
         $mimeIcon = __DIR__ . "/icons/folder-cyan.svg";
         header("Content-Type: image/svg+xml", true, 200);
