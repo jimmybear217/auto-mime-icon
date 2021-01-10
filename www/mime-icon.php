@@ -20,24 +20,21 @@ if (!empty($_GET["mime"])) {
     $mime = $_GET["mime"];
 }
 
-/*$wantedType = "";
-$valid_imageType = array("svg", "png");
-if (!empty($_GET["type"])) {
-    $wantedType = (in_array($_GET["type"], $valid_imageType)) ? $_GET["type"] : "";
-}*/
-
-// 1. check if file for this mime_type exists
-//if ($wantedType == "" || $wantedType == "svg") {
-    $mimeIcon = __DIR__ . "/icons/" . str_replace("/", "-", $mime) . ".svg";
-    if (file_exists($mimeIcon)){
-        header("Content-Type: " . mime_content_type($mimeIcon), true, 200);
-        die(file_get_contents($mimeIcon));
-    }    
-//}
-/*if ($wantedType == "" || $wantedType == "png") {
-    $mimeIcon = __DIR__ . "/icons/" . str_replace("/", "-", $mime) . ".png";
-    if (file_exists($mimeIcon)){
-        header("Content-Type: " . mime_content_type($mimeIcon), true, 200);
-        die(file_get_contents($mimeIcon));
-    }    
-}*/
+switch ($mime) {
+    case 'directory':
+        $mimeIcon = __DIR__ . "/icons/directory.png";
+        header("Content-Type: image/png", true);
+        echo file_get_contents($mimeIcon);
+        break;
+    
+    default:
+        $mimeIcon = __DIR__ . "/icons/papirus-svg/" . str_replace("/", "-", $mime) . ".svg";
+        if (file_exists($mimeIcon)){
+            header("Content-Type: image/svg+xml", true);
+            echo file_get_contents($mimeIcon);
+        } else {
+            header("Content-Type: text/plain", true);
+            echo $mimeIcon;
+        }
+        break;
+}
