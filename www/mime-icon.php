@@ -51,6 +51,11 @@ $textRedirections = array(
     "svg" => "image-x-svg+xml"
 );
 
+$dirRedirection = array(
+    ".git" => "github",
+    ".vscode" => "visual-studio-code"
+);
+
 // get file extentions
 $fileExtention = explode('.', $filename);
 $fileExtention = $fileExtention[count($fileExtention)-1];
@@ -97,8 +102,10 @@ switch (explode('/', $mime)[0]) {
     case 'directory':
         // maybe? randomize directory icon color based on all possibilies
         $mimeIcon = __DIR__ . "/icons/folder-cyan.svg";
-        if ($filename == ".git")
-            $mimeIcon = __DIR__ . "/icons/github.svg";
+        
+        if (in_array($filename, array_keys($dirRedirection)))
+            $mimeIcon = __DIR__ . "/icons/" . $dirRedirection[$filename] . ".svg";
+
         header("Content-Type: image/svg+xml", true, 200);
         echo file_get_contents($mimeIcon);
         break;

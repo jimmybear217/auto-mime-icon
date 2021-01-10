@@ -1049,3 +1049,5 @@ Image Mime: image/jpeg for banner.jpg
 Video Mime: video/x-m4v for mystory.mov
 Application Mime: application/octet-stream for .ds_store with extention ds_store: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/applications-all.svg
 Application Mime: application/octet-stream for .ds_store with extention ds_store: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/applications-all.svg
+Text Mime: text/plain for jimmygorokhoff.code-workspace with extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for jimmygorokhoff.code-workspace with extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
