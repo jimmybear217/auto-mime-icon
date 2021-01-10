@@ -27,8 +27,8 @@ if (!empty($_GET["filename"])) {
 
 switch ($mime) {
     case 'directory':
-        $mimeIcon = __DIR__ . "/icons/directory.png";
-        header("Content-Type: image/png", true);
+        $mimeIcon = __DIR__ . "/icons/folder-cyan.svg";
+        header("Content-Type: image/svg+xml", true, 200);
         echo file_get_contents($mimeIcon);
         break;
     
@@ -36,13 +36,13 @@ switch ($mime) {
         // check for existing icons in icons folder
         $mimeIconOriginal = __DIR__ . "/icons/" . str_replace("/", "-", $mime) . ".svg";
         if (file_exists($mimeIconOriginal)){
-            header("Content-Type: image/svg+xml", true);
+            header("Content-Type: image/svg+xml", true, 200);
             echo file_get_contents($mimeIconOriginal);
         } else {
             // check for matching icons is papirus list
             $mimeIcon = __DIR__ . "/icons/papirus-svg/" . str_replace("/", "-", $mime) . ".svg";
             if (file_exists($mimeIcon)){
-                header("Content-Type: image/svg+xml", true);
+                header("Content-Type: image/svg+xml", true, 200);
                 echo file_get_contents($mimeIcon);
                 $result = copy($mimeIcon, $mimeIconOriginal);
                 chmod($mimeIconOriginal, 0666);
