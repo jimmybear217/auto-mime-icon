@@ -38,8 +38,14 @@ $mimeRedirections = array(
 );
 
 $textRedirections = array(
-    "js" => "javascript"
+    "js" => "text-x-javascript",
+    "cpp" => "text-x-c++",
+    "c" => "text-x-c"
 );
+
+// get file extentions
+$fileExtention = explode('.', $filename);
+$fileExtention = $fileExtention[count($fileExtention)-1];
 
 switch (explode('/', $mime)[0]) {
     case 'directory':
@@ -56,19 +62,32 @@ switch (explode('/', $mime)[0]) {
         break;
 
     case 'text':
-        $fileExtention = explode('.', $filename);
-        $fileExtention = $fileExtention[count($fileExtention)-1];
-        $mimeIcon = __DIR__ . "/icons/text-x-" .  $fileExtention. ".svg";
-        if (in_array($mimeRedirections, array_keys($mimeRedirections))) {
+
+        // default icon
+        $mimeIcon = __DIR__ . "/icons/text-x-generic.svg";
+
+        // text/cpp => text-cpp
+        $mimeIconAttempt = __DIR__ . "/icons/" . str_replace("/", "-", $mime) . ".svg";
+        if (file_exists($mimeIconAttempt))
+            $mimeIcon = $mimeIconAttempt;
+
+        // text/cpp => text-x-cpp
+        $mimeIconAttempt = __DIR__ . "/icons/" . str_replace("/", "-x-", $mime) . ".svg";
+        if (file_exists($mimeIconAttempt))
+            $mimeIcon = $mimeIconAttempt;
+
+        // redirections of mimes to mimes
+        if (in_array($mimeRedirections, array_keys($mimeRedirections)))
             $mimeIcon = __DIR__ . "/icons/" . $mimeRedirections[$mime]. ".svg";
-        } elseif (in_array($fileExtention, $textRedirections)) {
+        
+        // redirections of extentions to mimes
+        if (in_array($fileExtention, $textRedirections))
             $mimeIcon = __DIR__ . "/icons/" . $textRedirections[$fileExtention]. ".svg";
-        } elseif (!file_exists($mimeIcon)) {
-            $mimeIcon = __DIR__ . "/icons/text-x-generic.svg";
-        }
+
+    
         header("Content-Type: image/svg+xml", true, 200);
         echo file_get_contents($mimeIcon);
-        error_log("Text Mime: $mime for $filename with extention $fileExtention\n", 3, "mimes_not_found.log");
+        error_log("Text Mime: $mime for $filename with extention $fileExtention: $mimeIcon\n", 3, "mimes_not_found.log");
         break;
     
     default:
