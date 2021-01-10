@@ -28,13 +28,23 @@ switch ($mime) {
         break;
     
     default:
-        $mimeIcon = __DIR__ . "/icons/papirus-svg/" . str_replace("/", "-", $mime) . ".svg";
+        // check for existing icons in icons folder
+        $mimeIcon = __DIR__ . "/icons/" . str_replace("/", "-", $mime) . ".svg";
         if (file_exists($mimeIcon)){
             header("Content-Type: image/svg+xml", true);
             echo file_get_contents($mimeIcon);
         } else {
-            header("Content-Type: text/plain", true);
-            echo $mimeIcon;
+            // check for matching icons is papirus list
+            $mimeIcon = __DIR__ . "/icons/papirus-svg/" . str_replace("/", "-", $mime) . ".svg";
+            if (file_exists($mimeIcon)){
+                header("Content-Type: image/svg+xml", true);
+                echo file_get_contents($mimeIcon);
+            } else {
+                // write the mime in plain text and in logs
+                header("Content-Type: text/plain", true);
+                error_log("Mime not found: $mime", 3, "mimes_not_found.log");
+                echo $mime;
+            }
         }
         break;
 }
