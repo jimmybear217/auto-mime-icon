@@ -20,6 +20,11 @@ if (!empty($_GET["mime"])) {
     $mime = $_GET["mime"];
 }
 
+$filename = '';
+if (!empty($_GET["filename"])) {
+    $filename = $_GET["filename"];
+}
+
 switch ($mime) {
     case 'directory':
         $mimeIcon = __DIR__ . "/icons/directory.png";
@@ -29,20 +34,23 @@ switch ($mime) {
     
     default:
         // check for existing icons in icons folder
-        $mimeIcon = __DIR__ . "/icons/" . str_replace("/", "-", $mime) . ".svg";
-        if (file_exists($mimeIcon)){
+        $mimeIconOriginal = __DIR__ . "/icons/" . str_replace("/", "-", $mime) . ".svg";
+        if (file_exists($mimeIconOriginal)){
             header("Content-Type: image/svg+xml", true);
-            echo file_get_contents($mimeIcon);
+            echo file_get_contents($mimeIconOriginal);
         } else {
             // check for matching icons is papirus list
             $mimeIcon = __DIR__ . "/icons/papirus-svg/" . str_replace("/", "-", $mime) . ".svg";
             if (file_exists($mimeIcon)){
                 header("Content-Type: image/svg+xml", true);
                 echo file_get_contents($mimeIcon);
+                $result = copy($mimeIcon, $mimeIconOriginal);
+                chmod($mimeIconOriginal, 0666);
+                error_log("Found: $mime for $filename | copy result: $result\n", 3, "mimes_not_found.log");
             } else {
                 // write the mime in plain text and in logs
                 header("Content-Type: text/plain", true);
-                error_log("Mime not found: $mime", 3, "mimes_not_found.log");
+                error_log("Mime not found: $mime for $filename\n", 3, "mimes_not_found.log");
                 echo $mime;
             }
         }
