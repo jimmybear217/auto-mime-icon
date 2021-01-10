@@ -17,12 +17,12 @@
 
 $mime='unknown';
 if (!empty($_GET["mime"])) {
-    $mime = $_GET["mime"];
+    $mime = trim($_GET["mime"]);
 }
 
 $filename = '';
 if (!empty($_GET["filename"])) {
-    $filename = $_GET["filename"];
+    $filename = trim($_GET["filename"]);
 }
 
 // aliases
@@ -46,6 +46,7 @@ $textRedirections = array(
 // get file extentions
 $fileExtention = explode('.', $filename);
 $fileExtention = $fileExtention[count($fileExtention)-1];
+$fileExtention = trim($fileExtention);
 
 switch (explode('/', $mime)[0]) {
     case 'directory':
@@ -68,23 +69,27 @@ switch (explode('/', $mime)[0]) {
 
         // text/cpp => text-cpp
         $mimeIconAttempt = __DIR__ . "/icons/" . str_replace("/", "-", $mime) . ".svg";
-        if (file_exists($mimeIconAttempt))
+        if (file_exists($mimeIconAttempt)) {
             $mimeIcon = $mimeIconAttempt;
+        }
 
         // text/cpp => text-x-cpp
         $mimeIconAttempt = __DIR__ . "/icons/" . str_replace("/", "-x-", $mime) . ".svg";
-        if (file_exists($mimeIconAttempt))
+        if (file_exists($mimeIconAttempt)) {
             $mimeIcon = $mimeIconAttempt;
-
+        }
+            
         // redirections of mimes to mimes
-        if (in_array($mimeRedirections, array_keys($mimeRedirections)))
+        if (in_array($mimeRedirections, array_keys($mimeRedirections))) {
             $mimeIcon = __DIR__ . "/icons/" . $mimeRedirections[$mime]. ".svg";
-        
-        // redirections of extentions to mimes
-        if (in_array($fileExtention, $textRedirections))
-            $mimeIcon = __DIR__ . "/icons/" . $textRedirections[$fileExtention]. ".svg";
+        }
 
-    
+        // redirections of extentions to mimes
+        if (in_array($fileExtention, $textRedirections)) {
+            $mimeIcon = __DIR__ . "/icons/" . $textRedirections[$fileExtention]. ".svg";
+            error_log("Debug: extention $fileExtention: $mimeIcon\n", 3, "mimes_not_found.log");
+        }
+            
         header("Content-Type: image/svg+xml", true, 200);
         echo file_get_contents($mimeIcon);
         error_log("Text Mime: $mime for $filename with extention $fileExtention: $mimeIcon\n", 3, "mimes_not_found.log");
