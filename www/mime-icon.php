@@ -43,7 +43,8 @@ $textRedirections = array(
     "js" => "text-x-javascript",
     "cpp" => "text-x-c++",
     "c" => "text-x-c",
-    "json" => "text-json"
+    "json" => "text-json",
+    "md" => "text-x-markdown"
 );
 
 // get file extentions
@@ -68,7 +69,8 @@ switch (explode('/', $mime)[0]) {
     case 'text':
 
         // default icon
-        $mimeIcon = __DIR__ . "/icons/text-x-generic.svg";
+        $mimeIconOriginal = __DIR__ . "/icons/text-x-generic.svg";
+        $mimeIcon = $mimeIconOriginal;
 
         // text/cpp => text-cpp
         $mimeIconAttempt = __DIR__ . "/icons/" . str_replace("/", "-", $mime) . ".svg";
@@ -88,14 +90,15 @@ switch (explode('/', $mime)[0]) {
         }
 
         // redirections of extentions to mimes
-        if (in_array($fileExtention, $textRedirections)) {
+        if (in_array($fileExtention, array_keys($textRedirections))) {
             $mimeIcon = __DIR__ . "/icons/" . $textRedirections[$fileExtention]. ".svg";
             error_log("Debug: extention $fileExtention: $mimeIcon\n", 3, "mimes_not_found.log");
         }
             
         header("Content-Type: image/svg+xml", true, 200);
         echo file_get_contents($mimeIcon);
-        error_log("Text Mime: $mime for $filename with extention $fileExtention: $mimeIcon\n", 3, "mimes_not_found.log");
+        if ($mimeIcon == $mimeIconOriginal)
+            error_log("Text Mime: $mime for $filename with extention $fileExtention: $mimeIcon\n", 3, "mimes_not_found.log");
         break;
     
     default:
