@@ -34,13 +34,16 @@ $mimeRedirections = array(
     "application/x-php" => "text-x-php",
     "application/php" => "text-x-php",
     "text-xml" => "application-xml",
-    "text/xml" => "application-xml"
+    "text/xml" => "application-xml",
+    "application-json" => "text-json",
+    "application/json" => "text-json"
 );
 
 $textRedirections = array(
     "js" => "text-x-javascript",
     "cpp" => "text-x-c++",
-    "c" => "text-x-c"
+    "c" => "text-x-c",
+    "json" => "text-json"
 );
 
 // get file extentions
