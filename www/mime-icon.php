@@ -89,7 +89,10 @@ switch (explode('/', $mime)[0]) {
 
 
     case 'directory':
+        // maybe? randomize directory icon color based on all possibilies
         $mimeIcon = __DIR__ . "/icons/folder-cyan.svg";
+        if ($filename == ".git")
+            $mimeIcon = __DIR__ . "/icons/github.svg";
         header("Content-Type: image/svg+xml", true, 200);
         echo file_get_contents($mimeIcon);
         break;
