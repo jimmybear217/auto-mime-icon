@@ -54,6 +54,7 @@ $textRedirections = array(
 $fileExtention = explode('.', $filename);
 $fileExtention = $fileExtention[count($fileExtention)-1];
 $fileExtention = trim($fileExtention);
+$fileExtention = strtolower($fileExtention);
 
 switch (explode('/', $mime)[0]) {
 
