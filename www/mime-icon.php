@@ -80,8 +80,14 @@ switch (explode('/', $mime)[0]) {
         if (in_array($mimeRedirections, array_keys($mimeRedirections))) {
             $mimeIcon = __DIR__ . "/icons/" . $mimeRedirections[$mime]. ".svg";
         }
+
+        if ($filename == strtolower(".DS_Store")) {
+            $mimeIcon = __DIR__ . "/icons/finder.png";
+            header("Content-Type: image/png", true, 200);
+        } else {
+            header("Content-Type: image/svg+xml", true, 200);
+        }
             
-        header("Content-Type: image/svg+xml", true, 200);
         echo file_get_contents($mimeIcon);
         if ($mimeIcon == $mimeIconOriginal)
             error_log("Application Mime: $mime for $filename with extention $fileExtention: $mimeIcon\n", 3, "mimes_not_found.log");
@@ -93,13 +99,7 @@ switch (explode('/', $mime)[0]) {
         $mimeIcon = __DIR__ . "/icons/folder-cyan.svg";
         if ($filename == ".git")
             $mimeIcon = __DIR__ . "/icons/github.svg";
-
-        if ($filename == ".ds_store") {
-            $mimeIcon = __DIR__ . "/icons/finder.png";
-            header("Content-Type: image/png", true, 200);
-        } else {
-            header("Content-Type: image/svg+xml", true, 200);
-        }
+        header("Content-Type: image/svg+xml", true, 200);
         echo file_get_contents($mimeIcon);
         break;
 
