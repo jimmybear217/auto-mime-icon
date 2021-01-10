@@ -1074,3 +1074,11 @@ Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime
 Debug: extention py: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-python.svg
 Debug: extention py: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-python.svg
 Text Mime: text/x-shellscript for download.sh with extention sh: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Debug: extention py: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-python.svg
+Debug: extention py: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-python.svg
+Debug: extention gitignore: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/github.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Text Mime: text/plain for 000-default.conf with extention conf: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for default-ssl.conf with extention conf: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for files.conf with extention conf: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
