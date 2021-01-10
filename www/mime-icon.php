@@ -47,7 +47,8 @@ $textRedirections = array(
     "md" => "text-x-markdown",
     "html" => "text-html",
     "py" => "text-x-python",
-    "css" => "text-css"
+    "css" => "text-css",
+    "svg" => "image-x-svg+xml"
 );
 
 // get file extentions
