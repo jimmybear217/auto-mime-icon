@@ -56,7 +56,9 @@ $textRedirections = array(
     "sh" => "text-x-shellscript",
     "bash" => "text-x-shellscript",
     "sql" => "application-vnd.oasis.opendocument.database",
-    "unity" => "unity-editor-icon"
+    "unity" => "unity-editor-icon",
+    "ics" => "x-office-calendar",
+    "ical" => "x-office-calendar"
 );
 
 $dirRedirection = array(
