@@ -52,7 +52,10 @@ $textRedirections = array(
     "code-workspace" => "visual-studio-code",
     "gitignore" => "github",
     "conf" => "text-x-makefile",
-    "htaccess" => "text-x-makefile"
+    "htaccess" => "text-x-makefile",
+    "sh" => "text-x-shellscript",
+    "bash" => "text-x-shellscript",
+    "sql" => "application-vnd.oasis.opendocument.database"
 );
 
 $dirRedirection = array(

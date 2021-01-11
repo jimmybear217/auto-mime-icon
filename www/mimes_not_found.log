@@ -1082,3 +1082,58 @@ Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/ic
 Text Mime: text/plain for 000-default.conf with extention conf: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
 Text Mime: text/plain for default-ssl.conf with extention conf: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
 Text Mime: text/plain for files.conf with extention conf: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Debug: extention conf: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-makefile.svg
+Debug: extention conf: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-makefile.svg
+Debug: extention conf: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-makefile.svg
+Debug: extention gitignore: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/github.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Text Mime: text/plain for hp2.sh with extention sh: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for hp1.sh with extention sh: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for hp3-hd2.sh with extention sh: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for hp8.sh with extention sh: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for hp5.sh with extention sh: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for playlist.txt with extention txt: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Debug: extention gitignore: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/github.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Application Mime: application/octet-stream for listdownloads.php with extention php: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/applications-all.svg
+Debug: extention html: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-html.svg
+Debug: extention css: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-css.svg
+Application Mime: application/octet-stream for listdownloads.php with extention php: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/applications-all.svg
+Debug: extention html: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-html.svg
+Debug: extention css: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-css.svg
+Debug: extention gitignore: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/github.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Debug: extention gitignore: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/github.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Debug: extention html: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-html.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Text Mime: text/plain for todo with extention todo: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Debug: extention gitignore: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/github.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Debug: extention htaccess: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-makefile.svg
+Debug: extention conf: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-makefile.svg
+Mime not found: inode/x-empty for internal_key.conf
+Debug: extention htaccess: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-makefile.svg
+Debug: extention htaccess: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-makefile.svg
+Debug: extention gitignore: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/github.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Text Mime: text/plain for todo with extention todo: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Debug: extention py: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-python.svg
+Debug: extention gitignore: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/github.svg
+Text Mime: text/plain for todo with extention todo: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Debug: extention html: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-html.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Text Mime: text/plain for test-call.sh with extention sh: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Debug: extention json: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-json.svg
+Debug: extention json: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-json.svg
+Debug: extention sh: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-shellscript.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Debug: extention html: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-html.svg
+Text Mime: text/plain for kik.apikey with extention apikey: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for database.sql with extention sql: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
