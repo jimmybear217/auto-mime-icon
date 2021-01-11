@@ -51,6 +51,8 @@ $textRedirections = array(
     "svg" => "image-x-svg+xml",
     "code-workspace" => "visual-studio-code",
     "gitignore" => "github",
+    "conf" => "text-x-makefile",
+    "htaccess" => "text-x-makefile"
 );
 
 $dirRedirection = array(
