@@ -1137,3 +1137,27 @@ Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/ic
 Debug: extention html: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-html.svg
 Text Mime: text/plain for kik.apikey with extention apikey: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
 Text Mime: text/plain for database.sql with extention sql: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Debug: extention sql: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/application-vnd.oasis.opendocument.database.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Debug: extention html: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-html.svg
+Debug: extention json: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-json.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Debug: extention html: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-html.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Debug: extention gitignore: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/github.svg
+Text Mime: text/plain for todo with extention todo: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Debug: extention code-workspace: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/visual-studio-code.svg
+Debug: extention gitignore: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/github.svg
+Debug: extention md: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-markdown.svg
+Application Mime: application/octet-stream for new terrain.asset with extention asset: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/applications-all.svg
+Text Mime: text/plain for new terrain.asset.meta with extention meta: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for scenes.meta with extention meta: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for samplescene.unity with extention unity: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for samplescene.unity.meta with extention meta: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for box.mat.meta with extention meta: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for screen.mat with extention mat: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for box.mat with extention mat: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for screen.mat.meta with extention meta: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for screenborder.mat with extention mat: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg
+Text Mime: text/plain for screenborder.mat.meta with extention meta: /home/jimmybear217/Documents/Projects/auto-mime-icon/www/icons/text-x-generic.svg

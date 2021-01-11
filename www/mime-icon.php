@@ -55,7 +55,8 @@ $textRedirections = array(
     "htaccess" => "text-x-makefile",
     "sh" => "text-x-shellscript",
     "bash" => "text-x-shellscript",
-    "sql" => "application-vnd.oasis.opendocument.database"
+    "sql" => "application-vnd.oasis.opendocument.database",
+    "unity" => "unity-editor-icon"
 );
 
 $dirRedirection = array(
