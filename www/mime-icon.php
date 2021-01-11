@@ -58,7 +58,8 @@ $textRedirections = array(
     "sql" => "application-vnd.oasis.opendocument.database",
     "unity" => "unity-editor-icon",
     "ics" => "x-office-calendar",
-    "ical" => "x-office-calendar"
+    "ical" => "x-office-calendar",
+    "asset" => "x-package-repository"
 );
 
 $dirRedirection = array(
