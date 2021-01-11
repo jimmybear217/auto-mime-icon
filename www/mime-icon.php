@@ -125,7 +125,7 @@ switch (explode('/', $mime)[0]) {
         $mimeIcon = __DIR__ . "/icons/image-x-generic.svg";
         header("Content-Type: image/svg+xml", true, 200);
         echo file_get_contents($mimeIcon);
-        error_log("Image Mime: $mime for $filename\n", 3, "mimes_not_found.log");
+        // error_log("Image Mime: $mime for $filename\n", 3, "mimes_not_found.log");
         break;
 
     case 'video':
@@ -197,7 +197,6 @@ switch (explode('/', $mime)[0]) {
         // redirections of extentions to mimes
         if (in_array($fileExtention, array_keys($textRedirections))) {
             $mimeIcon = __DIR__ . "/icons/" . $textRedirections[$fileExtention]. ".svg";
-            error_log("Debug: extention $fileExtention: $mimeIcon\n", 3, "mimes_not_found.log");
         }
             
         header("Content-Type: image/svg+xml", true, 200);
