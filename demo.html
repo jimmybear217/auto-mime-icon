@@ -80,9 +80,10 @@
                 }
             }
             console.log("Loaded file", file);
-            imgOutput.setAttribute("src", "mime-icon.php?type=" + encodeURI(divInput.files[0].type) + "&filename=" + encodeURI(divInput.files[0].name));
+            imgOutput.setAttribute("src", "mime-icon.php?mime=" + encodeURIComponent(divInput.files[0].type) + "&filename=" + encodeURIComponent(divInput.files[0].name));
             document.getElementById("filenameOutput").innerText = file.name;
             document.getElementById("mimeOutput").innerText = file.type;
+            document.getElementById("filesize").innerText = file.size + " Bytes";
             return file;
         }
     </script>
@@ -98,7 +99,7 @@
         <button onclick="readFileName();">Load file</button>
     </div>
     <div id="div-output">
-        <img id="img-output" src="" alt="Please Select a file" height="72" width="72">
+        <img id="img-output" src="" alt="Please Select a file" onChange="readFileName();" height="72" width="72">
         <table>
             <tr>
                 <th>Name</th>
@@ -107,6 +108,10 @@
             <tr>
                 <th>Type</th>
                 <td id="mimeOutput"></td>
+            </tr>
+            <tr>
+                <th>Size</th>
+                <td id="filesize"></td>
             </tr>
         </table>
     </div>
